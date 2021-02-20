@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gradation/widget_list_page.dart';
 
 void main() => runApp(
   MaterialApp(
@@ -12,23 +13,23 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('夕焼け'),
-        backgroundColor: Colors.deepOrange,
-        leading: IconButton(icon: Icon(Icons.menu), onPressed: null),
-        actions: <Widget>[
-          Icon(Icons.settings)
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text('夕焼け'),
+      //   backgroundColor: Colors.deepOrange,
+      //   leading: IconButton(icon: Icon(Icons.menu), onPressed: null),
+      //   actions: <Widget>[
+      //     Icon(Icons.settings)
+      //   ],
+      // ),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             colors: [
-              Colors.orange[900],
-              Colors.orange[700],
-              Colors.orange[400],
+              Colors.lightBlue[400],
+              Colors.lightBlue[700],
+              Colors.lightBlue[900],
             ]
           )
         ),
@@ -41,9 +42,19 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('Login', style: TextStyle(color: Colors.white, fontSize: 40),),
+                  Text('Flutter', style: TextStyle(color: Colors.white, fontSize: 40),),
+                  Text('Widget', style: TextStyle(color: Colors.white, fontSize: 40),),
+                  Text('Collection', style: TextStyle(color: Colors.white, fontSize: 40),),
                   SizedBox(height: 10,),
                   Text('Welcome Back', style: TextStyle(color: Colors.white, fontSize: 18),),
+                  RaisedButton(
+                    child: Text('Login'),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => WidgetListPage(),
+                      ));
+                    },
+                  ),
                 ],
               ),
             ),
