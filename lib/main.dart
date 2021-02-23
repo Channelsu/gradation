@@ -1,3 +1,4 @@
+import 'package:gradation/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
 import 'package:gradation/widget_list_page.dart';
 
@@ -42,11 +43,10 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('Flutter', style: TextStyle(color: Colors.white, fontSize: 40),),
-                  Text('Widget', style: TextStyle(color: Colors.white, fontSize: 40),),
-                  Text('Collection', style: TextStyle(color: Colors.white, fontSize: 40),),
+                  FadeAnimation(1, Text('Flutter', style: TextStyle(color: Colors.white, fontSize: 40),)),
+                  FadeAnimation(1.3, Text('Widget', style: TextStyle(color: Colors.white, fontSize: 40),)),
+                  FadeAnimation(1.6, Text('Collection', style: TextStyle(color: Colors.white, fontSize: 40),)),
                   SizedBox(height: 10,),
-                  // Text('Welcome Back', style: TextStyle(color: Colors.white, fontSize: 18),),
                   // RaisedButton(
                   //   child: Text('Login'),
                   //   onPressed: () {
@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       SizedBox(height: 60),
-                      Container(
+                      FadeAnimation(1.8, Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -110,11 +110,11 @@ class HomePage extends StatelessWidget {
                             ),
                           ],
                         ),
-                      ),
+                      )),
                       SizedBox(height: 40,),
-                      Text('パスワードをお忘れの方はこちら', style: TextStyle(color: Colors.grey),),
+                      FadeAnimation(1.8, Text('パスワードをお忘れの方はこちら', style: TextStyle(color: Colors.grey),)),
                       SizedBox(height: 30,),
-                      Container(
+                      FadeAnimation(2.0, Container(
                         height: 50,
                         margin: EdgeInsets.symmetric(horizontal: 50),
                         decoration: BoxDecoration(
@@ -124,14 +124,14 @@ class HomePage extends StatelessWidget {
                         child: Center(
                           child: Text('ログイン', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
                         ),
-                      ),
+                      )),
                       SizedBox(height: 50,),
-                      Text('他のSNSでログイン', style: TextStyle(color: Colors.grey),),
+                      FadeAnimation(2.2, Text('他のSNSでログイン', style: TextStyle(color: Colors.grey),)),
                       SizedBox(height: 30,),
                       Row(
                         children: <Widget>[
                           Expanded(
-                            child: Container(
+                            child: FadeAnimation(2.4, Container(
                               height: 50,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
@@ -140,11 +140,11 @@ class HomePage extends StatelessWidget {
                               child: Center(
                                 child: Text('Facebook', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
                               ),
-                            ),
+                            )),
                           ),
                           SizedBox(width: 30,),
                           Expanded(
-                            child: Container(
+                            child: FadeAnimation(2.4, Container(
                               height: 50,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
@@ -153,7 +153,7 @@ class HomePage extends StatelessWidget {
                               child: Center(
                                 child: Text('GitHub', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
                               ),
-                            ),
+                            )),
                           ),
                         ],
                       )
