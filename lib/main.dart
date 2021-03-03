@@ -117,13 +117,25 @@ class HomePage extends StatelessWidget {
                       FadeAnimation(2.0, Container(
                         height: 50,
                         margin: EdgeInsets.symmetric(horizontal: 50),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.blue,
-                        ),
-                        child: Center(
-                          child: Text('ログイン', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
-                        ),
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: ButtonTheme(
+                            minWidth: 300,
+                            height: 50,
+                            child: RaisedButton(
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => WidgetListPage(),
+                                ));
+                              },
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40.0)
+                              ),
+                              child: Text('ログイン', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),),
+                              color: Colors.blue,
+                            ),
+                          ),
+                        )
                       )),
                       SizedBox(height: 50,),
                       FadeAnimation(2.2, Text('他のSNSでログイン', style: TextStyle(color: Colors.grey),)),
