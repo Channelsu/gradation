@@ -25,28 +25,123 @@ class _WidgetListPageState extends State<WidgetListPage> {
           Icon(Icons.settings)
         ],
       ),
-      body: Container(
-        height: double.infinity,
-        // color: Colors.lightBlue,
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
         child: ListView(
           children: <Widget>[
-            ExpansionPanelList(
-              expansionCallback: (int index, bool isExpanded) {
-                setState(() {
-                  _panels[index].isExpanded = !_panels[index].isExpanded;
-                });
-              },
-              children: _panels.map((Panel panel) {
-                return ExpansionPanel(
-                  headerBuilder: (BuildContext context, bool isExpanded) {
-                    return Text(panel.title);
-                  },
-                  isExpanded: panel.isExpanded,
-                  body: Container(
-                    child: Text(panel.body),
+            Card(
+              color: Colors.lightBlue[100],
+              child: ExpansionTile(
+                title: Text('ボタン'),
+                children: <Widget>[
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
                   ),
-                );
-              }).toList(),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              color: Colors.lightBlue[100],
+              child: ExpansionTile(
+                title: Text('ボタン'),
+                children: <Widget>[
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              color: Colors.lightBlue[100],
+              child: ExpansionTile(
+                title: Text('ボタン'),
+                children: <Widget>[
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){},
+                    child: ListTile(
+                      title: Text('    FlatButton'),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
